@@ -1,0 +1,21 @@
+{
+  "name": "nuxt-tauri-starter",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.12.4",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd packages/backend && tauri dev",
+    "build": "cd packages/backend && tauri build",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^4.16.2",
+    "eslint": "^9.30.1",
+    "taze": "^19.1.0"
+  }
+}

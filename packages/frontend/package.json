@@ -1,0 +1,23 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.12.4",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt dev",
+    "generate": "nuxt generate"
+  },
+  "devDependencies": {
+    "@nuxt/test-utils": "^3.19.2",
+    "@tauri-apps/api": "^2.6.0",
+    "nuxt": "^3.17.6",
+    "pug": "^3.0.3",
+    "sanitize.css": "^13.0.0",
+    "sass": "^1.89.2",
+    "unocss": "^66.3.2"
+  }
+}
