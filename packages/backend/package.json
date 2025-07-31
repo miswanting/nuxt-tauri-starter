@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@10.13.1",
   "description": "",
   "author": "",
   "license": "ISC",
@@ -11,6 +11,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^2.6.2"
+    "@tauri-apps/cli": "^2.7.1"
   }
 }
