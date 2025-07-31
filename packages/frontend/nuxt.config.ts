@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devServer: { host: process.env.TAURI_DEV_HOST || 'localhost' },
   devtools: { enabled: true },
-  modules: ['@nuxt/test-utils'],
+  modules: ['@nuxt/test-utils', '@unocss/nuxt'],
   ssr: false,
   vite: {
     // Better support for Tauri CLI output
