@@ -1,7 +1,7 @@
 {
   "name": "nuxt-tauri-starter",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.15.0",
   "description": "",
   "author": "",
   "license": "ISC",
@@ -10,12 +10,14 @@
   "scripts": {
     "dev": "cd packages/backend && tauri dev",
     "build": "cd packages/backend && tauri build",
+    "clean": "rimraf -g ./**/target ./**/.nuxt ./**/node_modules",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.0.0",
-    "eslint": "^9.32.0",
-    "taze": "^19.1.0"
+    "@antfu/eslint-config": "^5.2.1",
+    "eslint": "^9.34.0",
+    "rimraf": "^6.0.1",
+    "taze": "^19.3.0"
   }
 }

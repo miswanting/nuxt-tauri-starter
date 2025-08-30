@@ -1,25 +1,26 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.15.0",
   "description": "",
   "author": "",
   "license": "ISC",
   "keywords": [],
   "main": "index.js",
   "scripts": {
+    "postinstall": "nuxt prepare",
     "dev": "nuxt dev",
     "generate": "nuxt generate"
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.19.2",
-    "@tauri-apps/api": "^2.7.0",
-    "@unocss/extractor-pug": "^66.3.3",
-    "@unocss/nuxt": "^66.3.3",
-    "nuxt": "^4.0.2",
+    "@tauri-apps/api": "^2.8.0",
+    "@unocss/extractor-pug": "^66.4.2",
+    "@unocss/nuxt": "^66.4.2",
+    "nuxt": "^4.0.3",
     "pug": "^3.0.3",
     "sanitize.css": "^13.0.0",
-    "sass": "^1.89.2",
-    "unocss": "^66.3.3"
+    "sass": "^1.91.0",
+    "unocss": "^66.4.2"
   }
 }
