@@ -1,53 +1,42 @@
 <script setup lang="ts">
 import { invoke } from '@tauri-apps/api/core'
 
-const greetMsg = ref('')
-const name = ref('')
+const ui = reactive({
+  name: '',
+  greetMsg: '',
+})
 
 async function greet() {
   // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-  greetMsg.value = await invoke('greet', { name: name.value })
+  ui.greetMsg = await invoke('greet', { name: ui.name })
 }
 </script>
 
 <template lang="pug">
-  main.container
-    h1 Welcome to Tauri + Nuxt
-    .row
-      a(href="https://vitejs.dev" target="_blank")
-        img(src="/vite.svg" class="logo vite" alt="Vite logo")
-      a(href="https://tauri.app" target="_blank")
-        img(src="/tauri.svg" class="logo tauri" alt="Tauri logo")
-      a(href="https://vuejs.org" target="_blank")
-        img(src="/vue.svg" class="logo vue" alt="Vue logo")
-    p Click on the Tauri, Vite, and Vue logos to learn more.
-    form.row(@submit.prevent="greet")
-      input#greet-input(v-model="name" placeholder="Enter a name...")
-      button(type="submit") Greet
-    p {{ greetMsg }}
+UDashboardPanel
+  template(#header)
+    UDashboardNavbar(title="Home")
+      template(#leading)
+        UDashboardSidebarCollapse
+  template(#body)
+    main.container
+      h1 Welcome to Tauri + Nuxt
+      .row
+        a(href="https://vitejs.dev" target="_blank")
+          img(src="/vite.svg" class="logo vite" alt="Vite logo")
+        a(href="https://tauri.app" target="_blank")
+          img(src="/tauri.svg" class="logo tauri" alt="Tauri logo")
+        a(href="https://vuejs.org" target="_blank")
+          img(src="/vue.svg" class="logo vue" alt="Vue logo")
+      p Click on the Tauri, Vite, and Vue logos to learn more.
+      form.row(@submit.prevent="greet")
+        input#greet-input(v-model="ui.name" placeholder="Enter a name...")
+        button(type="submit") Greet
+      p {{ ui.greetMsg }}
 </template>
 
 <style scoped lang="sass">
-:root
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif
-  font-size: 16px
-  line-height: 24px
-  font-weight: 400
-
-  color: #0f0f0f
-  background-color: #f6f6f6
-
-  font-synthesis: none
-  text-rendering: optimizeLegibility
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  -webkit-text-size-adjust: 100%
-
 .container
-  margin: 0
-  padding-top: 10vh
-  display: flex
-  flex-direction: column
   justify-content: center
   text-align: center
 
@@ -69,17 +58,6 @@ async function greet() {
 .row
   display: flex
   justify-content: center
-
-a
-  font-weight: 500
-  color: #646cff
-  text-decoration: inherit
-
-a:hover
-  color: #535bf2
-
-h1
-  text-align: center
 
 input,
 button

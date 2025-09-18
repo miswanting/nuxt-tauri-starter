@@ -2,9 +2,10 @@
 </script>
 
 <template lang="pug">
-NuxtLoadingIndicator
-NuxtLayout
-  NuxtPage
+UApp
+  NuxtLoadingIndicator
+  NuxtLayout
+    NuxtPage
 </template>
 
 <style scoped lang="sass">

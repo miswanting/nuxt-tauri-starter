@@ -2,9 +2,13 @@
 // https://tauri.app/start/frontend/nuxt/#update-nuxt-configuration
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
+  css: ['~/assets/css/main.css'],
   devServer: { host: process.env.TAURI_DEV_HOST || 'localhost' },
   devtools: { enabled: true },
-  modules: ['@nuxt/test-utils', '@unocss/nuxt'],
+  modules: [
+    '@nuxt/test-utils',
+    '@nuxt/ui',
+  ],
   ssr: false,
   vite: {
     // Better support for Tauri CLI output
@@ -17,5 +21,8 @@ export default defineNuxtConfig({
       // Tauri requires a consistent port
       strictPort: true,
     },
+  },
+  ui: {
+    fonts: false,
   },
 })
